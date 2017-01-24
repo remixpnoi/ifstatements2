@@ -1,0 +1,161 @@
+
+<html><head><title>If statements</title>
+<style>
+h1{
+	color:blue;
+}
+</style>
+</head>
+<body>
+<h2>Which state are you purchasing from?</h2>
+<ol>
+<li>NYC - 8.875%</li>
+<li>NJ - 7%</li>
+<li>Outlets - 4%</li>
+<li>CT - 6.35%</li>
+<li>Philly - 6.34%</li>
+</ol>
+
+
+
+<script type="text/javascript">
+	var amount= prompt("How much did you purchase?");
+	document.write("I purchased $200.00 " + amount + "in goods");
+
+	var sel = prompt("What state did you buy it from?");
+	
+	document.write("<br />My selection is " + sel);
+	
+	if (sel == 1)
+	{
+		document.write(", NYC, the tax amount is $");
+		document.write((amount*.08775).toFixed(2));
+	}
+	else if (sel == 2)
+	{
+		document.write(", NJ, the tax amount is $");
+		document.write((amount*0.07).toFixed(2));
+	}
+	else if (sel == 3){
+		document.write(", Outlet, the tax amount is $");
+		document.write((amount*0.04).toFixed(2));
+		
+	}
+	
+	else if (sel == 4){
+		document.write(", CT, the tax amount is $");
+		document.write((amount*6.65).toFixed(2));
+	}
+	
+	
+	else if (sel == 5){
+		document.write(", Philly, the tax amount is $");
+		document.write((amount*0.08).toFixed(2));
+	}
+		
+	
+	else
+	{
+		document.write("Please pick a valid number");
+	}
+
+
+
+
+</script>
+
+<h2>Which West coast state did you shop in?</h2>
+<ol>
+<li>LA - 9.5%</li>
+<li>Vegas - 8.1%</li>
+<li>SF - 9%</li>
+<li>SD - 8%</li>
+<li>Or - 0.00%</li>
+</ol>
+
+
+
+<script type="text/javascript">
+
+var weekDay = new Date().getDay();
+//var fullDate = new Date();
+//document.write(fullDate + "<br />");
+document.write(weekDay);
+
+	switch (weekDay)
+	{
+		case 0:
+			document.write("<h1>Today is Sunday, football day</h1>");
+			break;
+		case 1:
+			document.write("<h1>Today is Monday, the beginning of the week</h1>");
+			break;
+		case 2: 
+			document.write("<h1>Today is Tuesday, one less day to work</h1>");
+			break;
+		case 3:
+			document.write("<h1>Today is Wednesday, its humpday</h1>");
+			break;
+		case 4:
+			document.write("<h1>Today is Thursday, weekend is almost almost here</h1>");
+			break;
+		case 5: 
+			document.write("<h1>Today is Friday, the weekend begins</h1>");
+			break;
+		case 6:
+			document.write("<h1>Today is Saturday, It's still the weekend</h1>");
+			break;
+		}
+		
+
+	 var westcoast = prompt("What state did you shop in on the West coast?",1);
+	document.write("The amount spent is " + amount +" on the west coast");
+	
+	switch (westcoast)
+	{
+	case "1":
+		document.write(", LA, the tax amount is $");
+		document.write((amount*.095).toFixed(2));
+		break;
+	
+	
+	
+	case "2":
+		document.write(", Vegas, the tax amount is $");
+		document.write((amount*.081).toFixed(2));
+		break;
+	
+	
+	
+	case "3":
+		document.write(", SF, the tax amount is $");
+		document.write((amount*.09).toFixed(2));
+		break;
+	
+
+	
+	case "4":
+		document.write(", SD, the tax amount is $");
+		document.write((amount*.08).toFixed(2));
+		break;
+	
+
+	
+	case "5":
+		document.write(", OR, there is No sales teaxes!!!!");
+		break;
+	default: 
+		document.write("<br />that is not a valid choice");
+	}
+	
+	
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
